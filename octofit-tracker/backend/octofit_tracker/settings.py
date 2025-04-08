@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-+4c_sn6%7zwyc2bxu6!+w560v2ex2z0t_zpzrac=m%l__h^a6-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['animated-space-happiness-x7jvqqq4wvrcvqrq-8000.app.github.dev', 'localhost', '127.0.0.1']
 
 
 # Application definition
