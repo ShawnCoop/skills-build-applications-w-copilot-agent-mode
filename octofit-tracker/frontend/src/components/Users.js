@@ -16,15 +16,15 @@ function Users() {
       <table className="table table-striped table-hover">
         <thead className="table-info">
           <tr>
-            <th>ID</th>
             <th>Username</th>
+            <th>Email</th>
           </tr>
         </thead>
         <tbody>
           {users.map(user => (
             <tr key={user.id}>
-              <td>{user.id}</td>
               <td>{user.username}</td>
+              <td>{user.email}</td>
             </tr>
           ))}
         </tbody>

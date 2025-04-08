@@ -10,26 +10,30 @@ function Teams() {
       .catch(error => console.error('Error fetching teams:', error));
   }, []);
 
-  // Updated to use a Bootstrap table for displaying teams
   return (
     <div>
       <h1 className="mb-4">Teams</h1>
-      <table className="table table-bordered table-hover">
-        <thead className="table-secondary">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {teams.map(team => (
-            <tr key={team.id}>
-              <td>{team.id}</td>
-              <td>{team.name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {teams.map(team => (
+        <div key={team.id} className="mb-5">
+          <h2>Team: {team.name}</h2>
+          <table className="table table-bordered table-hover">
+            <thead className="table-secondary">
+              <tr>
+                <th>Member ID</th>
+                <th>Member Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              {team.members.map(member => (
+                <tr key={member.id}>
+                  <td>{member.username}</td>
+                  <td>{member.email}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
     </div>
   );
 }

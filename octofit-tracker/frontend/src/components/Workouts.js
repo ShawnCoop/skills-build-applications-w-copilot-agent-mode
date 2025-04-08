@@ -16,15 +16,15 @@ function Workouts() {
       <table className="table table-striped table-bordered">
         <thead className="table-success">
           <tr>
-            <th>ID</th>
             <th>Name</th>
+            <th>Description</th>
           </tr>
         </thead>
         <tbody>
           {workouts.map(workout => (
             <tr key={workout.id}>
-              <td>{workout.id}</td>
               <td>{workout.name}</td>
+              <td>{workout.description}</td>
             </tr>
           ))}
         </tbody>

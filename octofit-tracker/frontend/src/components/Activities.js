@@ -17,14 +17,16 @@ function Activities() {
         <thead className="table-dark">
           <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>Activity Type</th>
+            <th>Duration</th>
           </tr>
         </thead>
         <tbody>
           {activities.map(activity => (
-            <tr key={activity.id}>
-              <td>{activity.id}</td>
-              <td>{activity.name}</td>
+            <tr key={activity._id}>
+              <td>{activity._id}</td>
+              <td>{activity.activity_type}</td>
+              <td>{activity.duration}</td>
             </tr>
           ))}
         </tbody>
